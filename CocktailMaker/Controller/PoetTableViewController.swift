@@ -1,0 +1,107 @@
+//
+//  PoetTableViewController.swift
+//  CocktailMaker
+//
+//  Created by Pieter Venter on 4/23/18.
+//  Copyright © 2018 myric. All rights reserved.
+//
+
+import UIKit
+import Alamofire
+import SwiftyJSON
+
+class PoetTableViewController: UITableViewController {
+    
+    
+    let BASE_URL = "http://poetrydb.org/authors"
+    //MARK: Properties
+    var poets = [String]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getPoetryData(url: BASE_URL)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poets.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "PoetTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PoetTableViewCell else {
+            
+            fatalError("The dequeue cell is not an instance of PoetTableViewCell")
+            
+        }
+        
+        //Fetches the appropriate meal for the data source layout
+        let poet = poets[indexPath.row]
+        
+        cell.nameLabel.text = poet
+        cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
+        
+        return cell
+    }
+    
+    
+    //MARK: - Networking
+    /***************************************************************/
+    
+    //Write the getWeatherData method here:
+    func getPoetryData(url : String){
+        
+        Alamofire.request(url,method : .get).responseJSON {
+            response in
+            if response.result.isSuccess{
+                
+                print("Success! Got the weather data")
+                let poetryJSON : JSON = JSON(response.result.value!)
+                let authorsArray = poetryJSON["authors"]
+                self.updatePoetryData(json: authorsArray)
+            }
+            else{
+                
+              //Handle errors NB!
+                
+            }
+            
+        }
+    }
+    
+    //MARK: - JSON Parsing
+    /***************************************************************/
+    
+    
+    //Write the updateWeatherData method here:
+    func updatePoetryData (json : JSON){
+        
+        //
+        //        let photo1 = UIImage(named: "meal1")
+        //   var val = json[0]
+        //        print(json.count)
+        //
+        for author in json{
+            if let ss = author.1.rawString() {
+                print(ss)
+                poets.append(ss)
+            }
+            
+            
+        }
+        self.tableView.reloadData()
+        
+    }
+}

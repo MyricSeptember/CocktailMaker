@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC4208E70DB00CC315F /* PoetTableViewController.swift */; };
 		67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD2208C984F00A71A63 /* AppDelegate.swift */; };
 		67163AD5208C984F00A71A63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD4208C984F00A71A63 /* ViewController.swift */; };
 		67163AD8208C984F00A71A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD6208C984F00A71A63 /* Main.storyboard */; };
 		67163ADA208C984F00A71A63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD9208C984F00A71A63 /* Images.xcassets */; };
 		67163ADD208C984F00A71A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163ADB208C984F00A71A63 /* LaunchScreen.storyboard */; };
 		67163AE8208C984F00A71A63 /* CocktailMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AE7208C984F00A71A63 /* CocktailMakerTests.swift */; };
+		678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */; };
 		BA502A87219D75BA7D7A75B0 /* Pods_CocktailMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231F66ADF1BAA1F09CA38473 /* Pods_CocktailMakerTests.framework */; };
 		BD1217AF67ADD3FE84C2CAF5 /* Pods_CocktailMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E990ECAF01D55A2E32290EF /* Pods_CocktailMaker.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,7 @@
 		231F66ADF1BAA1F09CA38473 /* Pods_CocktailMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E53611E94E5B4FE5767132C /* Pods-CocktailMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMakerTests/Pods-CocktailMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C288855A01848A0EF8A3B94 /* Pods-CocktailMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMakerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMakerTests/Pods-CocktailMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67124AC4208E70DB00CC315F /* PoetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetTableViewController.swift; sourceTree = "<group>"; };
 		67163ACF208C984F00A71A63 /* CocktailMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67163AD2208C984F00A71A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67163AD4208C984F00A71A63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		67163AE3208C984F00A71A63 /* CocktailMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67163AE7208C984F00A71A63 /* CocktailMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailMakerTests.swift; sourceTree = "<group>"; };
 		67163AE9208C984F00A71A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetTableViewCell.swift; sourceTree = "<group>"; };
 		F1669C8641CD3DCE38DF9D4B /* Pods-CocktailMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker.release.xcconfig"; sourceTree = "<group>"; };
 		F712CF1B006BE227174CF92F /* Pods-CocktailMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +104,7 @@
 		67163AD1208C984F00A71A63 /* CocktailMaker */ = {
 			isa = PBXGroup;
 			children = (
+				67163ADE208C984F00A71A63 /* Info.plist */,
 				67163AF2208E563A00A71A63 /* Model */,
 				67163AF3208E564600A71A63 /* View */,
 				67163AF4208E564E00A71A63 /* Controller */,
@@ -121,6 +126,7 @@
 		67163AF2208E563A00A71A63 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 		67163AF4208E564E00A71A63 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
 				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
 				67163AD4208C984F00A71A63 /* ViewController.swift */,
 			);
@@ -146,7 +153,6 @@
 		67163AF5208E572800A71A63 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				67163ADE208C984F00A71A63 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,6 +333,8 @@
 			files = (
 				67163AD5208C984F00A71A63 /* ViewController.swift in Sources */,
 				67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */,
+				678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */,
+				67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
