@@ -1,0 +1,6 @@
+framework module Pods_CocktailMaker {
+  umbrella header "Pods-CocktailMaker-umbrella.h"
+
+  export *
+  module * { export * }
+}
