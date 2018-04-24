@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC4208E70DB00CC315F /* PoetTableViewController.swift */; };
+		67124AC7208EB10B00CC315F /* PoemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */; };
+		67124AC9208F1A7000CC315F /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC8208F1A7000CC315F /* Poem.swift */; };
 		67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD2208C984F00A71A63 /* AppDelegate.swift */; };
-		67163AD5208C984F00A71A63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD4208C984F00A71A63 /* ViewController.swift */; };
+		67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD4208C984F00A71A63 /* PoetViewController.swift */; };
 		67163AD8208C984F00A71A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD6208C984F00A71A63 /* Main.storyboard */; };
 		67163ADA208C984F00A71A63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD9208C984F00A71A63 /* Images.xcassets */; };
 		67163ADD208C984F00A71A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163ADB208C984F00A71A63 /* LaunchScreen.storyboard */; };
@@ -35,9 +37,11 @@
 		2E53611E94E5B4FE5767132C /* Pods-CocktailMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMakerTests/Pods-CocktailMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C288855A01848A0EF8A3B94 /* Pods-CocktailMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMakerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMakerTests/Pods-CocktailMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67124AC4208E70DB00CC315F /* PoetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetTableViewController.swift; sourceTree = "<group>"; };
+		67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemTableViewCell.swift; sourceTree = "<group>"; };
+		67124AC8208F1A7000CC315F /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		67163ACF208C984F00A71A63 /* CocktailMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67163AD2208C984F00A71A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67163AD4208C984F00A71A63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		67163AD4208C984F00A71A63 /* PoetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetViewController.swift; sourceTree = "<group>"; };
 		67163AD7208C984F00A71A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67163AD9208C984F00A71A63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67163ADC208C984F00A71A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */,
+				67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */,
+				67124AC8208F1A7000CC315F /* Poem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,7 +151,7 @@
 			children = (
 				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
 				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
-				67163AD4208C984F00A71A63 /* ViewController.swift */,
+				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,10 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67163AD5208C984F00A71A63 /* ViewController.swift in Sources */,
+				67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */,
 				67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */,
 				678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */,
 				67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */,
+				67124AC9208F1A7000CC315F /* Poem.swift in Sources */,
+				67124AC7208EB10B00CC315F /* PoemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

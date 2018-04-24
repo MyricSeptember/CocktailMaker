@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PoetViewController.swift
 //  CocktailMaker
 //
 //  Created by Pieter Venter on 4/22/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PoetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,7 +2,7 @@
 //  PoetTableViewController.swift
 //  CocktailMaker
 //
-//  Created by Pieter Venter on 4/23/18.
+//  
 //  Copyright © 2018 myric. All rights reserved.
 //
 
@@ -52,6 +52,32 @@ class PoetTableViewController: UITableViewController {
         
         cell.nameLabel.text = poet
         cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
+        
+        if poet == "Adam Lindsay Gordon" {
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "Adam Lindsay Gordon")
+        }
+        else if poet == "Alan Seeger" {
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "Alan Seeger")
+        }
+        else if poet == "Alexander Pope" {
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "Alexander Pope")
+        }
+        else if poet == "Algernon Charles Swinburne" {
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "Algernon Charles Swinburne")
+        }
+        else if poet == "Ambrose Bierce" {
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "Ambrose Bierce")
+        }
+     
+        else{
+            
+            cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
+        }
         
         return cell
     }
