@@ -73,7 +73,7 @@ class PoetTableViewController: UITableViewController {
             
             cell.photoImageView.image = #imageLiteral(resourceName: "Ambrose Bierce")
         }
-     
+            
         else{
             
             cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
@@ -86,7 +86,7 @@ class PoetTableViewController: UITableViewController {
     //MARK: - Networking
     /***************************************************************/
     
-    //Write the getWeatherData method here:
+    //Write the getPoetryData method here:
     func getPoetryData(url : String){
         
         Alamofire.request(url,method : .get).responseJSON {
@@ -96,12 +96,13 @@ class PoetTableViewController: UITableViewController {
                 print("Success! Got the weather data")
                 let poetryJSON : JSON = JSON(response.result.value!)
                 let authorsArray = poetryJSON["authors"]
+                let authors = poetryJSON["authors"]
+                print("authors: \(authors)")
                 self.updatePoetryData(json: authorsArray)
             }
             else{
                 
-              //Handle errors NB!
-                
+                //Handle errors NB!
             }
             
         }
@@ -111,23 +112,16 @@ class PoetTableViewController: UITableViewController {
     /***************************************************************/
     
     
-    //Write the updateWeatherData method here:
+    //Write the updatePoetryData method here:
     func updatePoetryData (json : JSON){
-        
-        //
-        //        let photo1 = UIImage(named: "meal1")
-        //   var val = json[0]
-        //        print(json.count)
-        //
         for author in json{
+            
+           // print("Author: \(author)")
+            
             if let ss = author.1.rawString() {
-                print(ss)
-                poets.append(ss)
+                    poets.append(ss)
             }
-            
-            
         }
         self.tableView.reloadData()
-        
     }
 }

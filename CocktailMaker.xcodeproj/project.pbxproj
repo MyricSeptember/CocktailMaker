@@ -10,6 +10,7 @@
 		67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC4208E70DB00CC315F /* PoetTableViewController.swift */; };
 		67124AC7208EB10B00CC315F /* PoemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */; };
 		67124AC9208F1A7000CC315F /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC8208F1A7000CC315F /* Poem.swift */; };
+		67124ACB208F285800CC315F /* PoemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124ACA208F285800CC315F /* PoemTableViewController.swift */; };
 		67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD2208C984F00A71A63 /* AppDelegate.swift */; };
 		67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD4208C984F00A71A63 /* PoetViewController.swift */; };
 		67163AD8208C984F00A71A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD6208C984F00A71A63 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		67124AC4208E70DB00CC315F /* PoetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetTableViewController.swift; sourceTree = "<group>"; };
 		67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemTableViewCell.swift; sourceTree = "<group>"; };
 		67124AC8208F1A7000CC315F /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
+		67124ACA208F285800CC315F /* PoemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemTableViewController.swift; sourceTree = "<group>"; };
 		67163ACF208C984F00A71A63 /* CocktailMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67163AD2208C984F00A71A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67163AD4208C984F00A71A63 /* PoetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		67163AF4208E564E00A71A63 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				67124ACA208F285800CC315F /* PoemTableViewController.swift */,
 				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
 				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
 				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
@@ -339,6 +342,7 @@
 			files = (
 				67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */,
 				67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */,
+				67124ACB208F285800CC315F /* PoemTableViewController.swift in Sources */,
 				678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */,
 				67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */,
 				67124AC9208F1A7000CC315F /* Poem.swift in Sources */,
