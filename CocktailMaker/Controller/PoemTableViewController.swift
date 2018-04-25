@@ -9,14 +9,22 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class PoemTableViewController: UITableViewController {
+class PoemTableViewController: UITableViewController,UINavigationControllerDelegate {
     
     //MARK: Properties
     var poems = [Poem]()
+    var poetNameText : String?
+    
+    //TODO moVe this to the Constants class
+    var BASE_URL = "http://poetrydb.org/author/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Poems"
+        
+        let formattedString = poetNameText!.replacingOccurrences(of: " ", with: "%20")
+        getPoemData(url:"\(BASE_URL)\(formattedString)")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,13 +69,17 @@ class PoemTableViewController: UITableViewController {
             response in
             if response.result.isSuccess{
                 
-                print("Success! Got the weather data")
-                let poemJSON : JSON = JSON(response.result.value!)
-                let title = poemJSON["title"]
-                self.updatePoemData(json: title)
+                print("Success! Got the poem data")
+                let poemJSON = JSON(response.result.value!)
+                let title = poemJSON
+                //                print("TITLES: \(title)")
+                //                print("HELO")
+                self.updatePoemData(json: poemJSON)
             }
             else{
                 
+                
+                print( response.error)
                 //Handle errors NB!
             }
         }
@@ -78,14 +90,13 @@ class PoemTableViewController: UITableViewController {
     
     //Write the updatePoemData method here:
     func updatePoemData (json : JSON){
-        //let poem = Poem(with: (json as? [AnyHashable: Any])!)
+        print(json.count)
         
-        //        for poem in json{
-        //            if let ss = poem.1.rawString() {
-        //                print(ss)
-        //                poems.append(ss)
-        //            }
-        //        }
+        for i in 0..<json.count {
+            let poem = Poem(title: json[i]["title"].stringValue,author: json[i]["author"].stringValue,lines: json[i]["lines"].arrayValue.map({$0[].stringValue}),linecount: json[i]["linecount"].intValue)
+            poems.append(poem)
+            
+        }
         self.tableView.reloadData()
     }
 }

@@ -14,10 +14,10 @@ class Poem {
     var lines = [""]
     var linecount = 0
     
-    init(with json: [AnyHashable: Any]) {
-        if let title = json["title"] as? String {  self.title = title}
-        if let author = json["author"] as? String {  self.author = author}
-        if let lines = json["lines"] as? [String] {  self.lines = lines}
-        if let linecount = json["linecount"] as? Int {  self.linecount = linecount}
+    init(title:String,author:String,lines: [String],linecount:Int) {
+        self.title = title
+     self.author = author
+     self.lines = lines
+     self.linecount = linecount
     }
 }

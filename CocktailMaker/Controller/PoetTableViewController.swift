@@ -23,6 +23,7 @@ class PoetTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Authors"
         getPoetryData(url: BASE_URL)
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,7 +101,7 @@ class PoetTableViewController: UITableViewController {
                 let poetryJSON : JSON = JSON(response.result.value!)
                 let authorsArray = poetryJSON["authors"]
                 let authors = poetryJSON["authors"]
-                print("authors: \(authors)")
+                //print("authors: \(authors)")
                 self.updatePoetryData(json: authorsArray)
             }
             else{
@@ -130,9 +131,30 @@ class PoetTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+      
+        guard let poemTableViewController = segue.destination as? PoemTableViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
         
+        guard let selectedPoetCell = sender as? PoetTableViewCell else {
+            fatalError("Unexpected sender: \(sender)")
+        }
         
+        guard let indexPath = tableView.indexPath(for: selectedPoetCell) else {
+            fatalError("The selected cell is not being displayed by the table")
+        }
+        
+        let selectedPoet = poets[indexPath.row]
+        poemTableViewController.poetNameText = selectedPoet
+        
+       
+    
         
     }
+    
+    
+    
+    
+    
     
 }

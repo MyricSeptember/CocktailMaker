@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1463.2" y="116.49175412293854"/>
+            <point key="canvasLocation" x="2303" y="90"/>
         </scene>
         <!--Poet Table View Controller-->
         <scene sceneID="nqp-ys-vef">
@@ -63,7 +63,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="KGi-Mz-ypp" id="ei2-TL-RDU"/>
                                     <outlet property="photoImageView" destination="iad-H7-5Uk" id="FTR-z5-hqM"/>
-                                    <segue destination="Vxu-Xu-TSx" kind="show" identifier="ShowDetail" id="x4B-fz-8bl"/>
+                                    <segue destination="Vxu-Xu-TSx" kind="show" id="LhI-SN-dLE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="-284" y="133.00492610837438"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Poem Table View Controller-->
         <scene sceneID="bLw-TK-lyO">
             <objects>
-                <tableViewController id="Vxu-Xu-TSx" sceneMemberID="viewController">
+                <tableViewController id="Vxu-Xu-TSx" customClass="PoemTableViewController" customModule="CocktailMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z7Y-b0-8dD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +103,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="poemNameLabel" destination="7DB-ED-8XM" id="bff-Po-Vix"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -110,10 +113,11 @@
                             <outlet property="delegate" destination="Vxu-Xu-TSx" id="sKe-0L-E4B"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Wia-s3-4Qa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyg-zM-rE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647.20000000000005" y="132.26600985221674"/>
+            <point key="canvasLocation" x="358" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mjd-kC-GJ9">
