@@ -9,16 +9,19 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import os.log
 
 class PoetTableViewController: UITableViewController {
     
-    
+    //TODO moVe this to the Constants class
     let BASE_URL = "http://poetrydb.org/authors"
+    
     //MARK: Properties
     var poets = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Authors"
         getPoetryData(url: BASE_URL)
     }
     
@@ -93,7 +96,7 @@ class PoetTableViewController: UITableViewController {
             response in
             if response.result.isSuccess{
                 
-                print("Success! Got the weather data")
+                print("Success! Got the poet data")
                 let poetryJSON : JSON = JSON(response.result.value!)
                 let authorsArray = poetryJSON["authors"]
                 let authors = poetryJSON["authors"]
@@ -102,7 +105,7 @@ class PoetTableViewController: UITableViewController {
             }
             else{
                 
-                //Handle errors NB!
+                //TODO Handle errors NB!
             }
             
         }
@@ -124,4 +127,12 @@ class PoetTableViewController: UITableViewController {
         }
         self.tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        
+        
+    }
+    
 }

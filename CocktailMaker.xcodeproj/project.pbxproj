@@ -151,9 +151,9 @@
 		67163AF4208E564E00A71A63 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
 				67124ACA208F285800CC315F /* PoemTableViewController.swift */,
 				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
-				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
 				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
 			);
 			path = Controller;
