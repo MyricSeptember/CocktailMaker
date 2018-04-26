@@ -152,9 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				67163AD2208C984F00A71A63 /* AppDelegate.swift */,
+				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
 				67124ACA208F285800CC315F /* PoemTableViewController.swift */,
 				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
-				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,11 +321,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

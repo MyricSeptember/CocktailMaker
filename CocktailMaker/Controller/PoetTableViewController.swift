@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 import os.log
 
 class PoetTableViewController: UITableViewController {
@@ -22,6 +23,7 @@ class PoetTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Authors"
+        SVProgressHUD.show()
         getPoetryData(url: BASE_URL)
        
     }
@@ -96,11 +98,11 @@ class PoetTableViewController: UITableViewController {
         Alamofire.request(url,method : .get).responseJSON {
             response in
             if response.result.isSuccess{
-                
+                SVProgressHUD.dismiss()
                 print("Success! Got the poet data")
                 let poetryJSON : JSON = JSON(response.result.value!)
                 let authorsArray = poetryJSON["authors"]
-                let authors = poetryJSON["authors"]
+                _ = poetryJSON["authors"]
                 //print("authors: \(authors)")
                 self.updatePoetryData(json: authorsArray)
             }
@@ -137,7 +139,7 @@ class PoetTableViewController: UITableViewController {
         }
         
         guard let selectedPoetCell = sender as? PoetTableViewCell else {
-            fatalError("Unexpected sender: \(sender)")
+            fatalError("Unexpected sender: \(String(describing: sender))")
         }
         
         guard let indexPath = tableView.indexPath(for: selectedPoetCell) else {
@@ -146,15 +148,5 @@ class PoetTableViewController: UITableViewController {
         
         let selectedPoet = poets[indexPath.row]
         poemTableViewController.poetNameText = selectedPoet
-        
-       
-    
-        
     }
-    
-    
-    
-    
-    
-    
 }

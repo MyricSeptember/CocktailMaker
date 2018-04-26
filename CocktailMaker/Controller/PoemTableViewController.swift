@@ -8,12 +8,14 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 class PoemTableViewController: UITableViewController,UINavigationControllerDelegate {
     
     //MARK: Properties
     var poems = [Poem]()
     var poetNameText : String?
+    var poemTextVal = ""
     
     //TODO moVe this to the Constants class
     var BASE_URL = "http://poetrydb.org/author/"
@@ -21,7 +23,7 @@ class PoemTableViewController: UITableViewController,UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Poems"
-        
+         SVProgressHUD.show()
         let formattedString = poetNameText!.replacingOccurrences(of: " ", with: "%20")
         getPoemData(url:"\(BASE_URL)\(formattedString)")
         
@@ -71,10 +73,9 @@ class PoemTableViewController: UITableViewController,UINavigationControllerDeleg
                 
                 print("Success! Got the poem data")
                 let poemJSON = JSON(response.result.value!)
-                let title = poemJSON
-                //                print("TITLES: \(title)")
-                //                print("HELO")
+                _ = poemJSON
                 self.updatePoemData(json: poemJSON)
+                 SVProgressHUD.dismiss()
             }
             else{
                 
@@ -90,13 +91,43 @@ class PoemTableViewController: UITableViewController,UINavigationControllerDeleg
     
     //Write the updatePoemData method here:
     func updatePoemData (json : JSON){
-        print(json.count)
-        
         for i in 0..<json.count {
             let poem = Poem(title: json[i]["title"].stringValue,author: json[i]["author"].stringValue,lines: json[i]["lines"].arrayValue.map({$0[].stringValue}),linecount: json[i]["linecount"].intValue)
             poems.append(poem)
             
         }
         self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let poetViewController = segue.destination as? PoetViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+        
+        guard let selectedPoemCell = sender as? PoemTableViewCell else {
+            fatalError("Unexpected sender: \(String(describing: sender))")
+        }
+        
+        guard let indexPath = tableView.indexPath(for: selectedPoemCell) else {
+            fatalError("The selected cell is not being displayed by the table")
+        }
+        
+        let selectedPoem = poems[indexPath.row]
+        
+        
+        poetViewController.poem = selectedPoem
+        
+    //poetViewController.authorImage.image = #imageLiteral(resourceName: "defaultPhoto")
+//        poetViewController.authorNameText.text = "dsfgsfdgsfdgsdfg"
+//        poetViewController.poemTitleText.text = "fdsdfsdfadsf"
+//
+//        for textVal in selectedPoem.lines{
+//
+//             poemTextVal.append("\n sdfjldksjflajflsjflskfsgsg")
+//
+//        }
+//       poetViewController.poemText.text = poemTextVal
     }
 }

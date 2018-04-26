@@ -9,6 +9,8 @@ target 'CocktailMaker' do
 
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'SVProgressHUD'
+pod 'ChameleonFramework'
 
   target 'CocktailMakerTests' do
     inherit! :search_paths
