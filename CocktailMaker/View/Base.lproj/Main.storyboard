@@ -103,7 +103,7 @@
         <scene sceneID="nqp-ys-vef">
             <objects>
                 <tableViewController id="BJw-La-Ldn" customClass="PoetTableViewController" customModule="CocktailMaker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UAy-0Z-8s6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UAy-0Z-8s6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,21 +112,43 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AFd-xg-msC" id="l6y-zD-Du4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iad-H7-5Uk">
-                                            <rect key="frame" x="0.0" y="0.0" width="97" height="89"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-Mz-ypp">
-                                            <rect key="frame" x="117" y="34" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-c8-J9A">
+                                            <rect key="frame" x="10" y="5" width="355" height="84"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iad-H7-5Uk">
+                                                    <rect key="frame" x="0.0" y="2" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="23Q-bf-7dI"/>
+                                                        <constraint firstAttribute="width" constant="80" id="YzJ-Vx-mM6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-Mz-ypp">
+                                                    <rect key="frame" x="8" y="8" width="339" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="KGi-Mz-ypp" secondAttribute="bottom" constant="8" id="06q-dd-foM"/>
+                                                <constraint firstItem="iad-H7-5Uk" firstAttribute="centerY" secondItem="cpp-c8-J9A" secondAttribute="centerY" id="AFU-zX-Sud"/>
+                                                <constraint firstAttribute="trailing" secondItem="KGi-Mz-ypp" secondAttribute="trailing" constant="8" id="L8O-rT-kDD"/>
+                                                <constraint firstItem="iad-H7-5Uk" firstAttribute="leading" secondItem="cpp-c8-J9A" secondAttribute="leading" id="Qtd-J3-05I"/>
+                                                <constraint firstItem="KGi-Mz-ypp" firstAttribute="top" secondItem="cpp-c8-J9A" secondAttribute="top" constant="8" id="TIL-Ta-hMT"/>
+                                                <constraint firstItem="KGi-Mz-ypp" firstAttribute="leading" secondItem="cpp-c8-J9A" secondAttribute="leading" constant="8" id="xlv-BF-wfF"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cpp-c8-J9A" firstAttribute="top" secondItem="l6y-zD-Du4" secondAttribute="top" constant="5" id="aQv-Wr-gLV"/>
+                                        <constraint firstItem="cpp-c8-J9A" firstAttribute="leading" secondItem="l6y-zD-Du4" secondAttribute="leading" constant="10" id="l7I-ni-WlW"/>
+                                        <constraint firstAttribute="bottom" secondItem="cpp-c8-J9A" secondAttribute="bottom" constant="0.5" id="pHI-PD-UK7"/>
+                                        <constraint firstAttribute="trailing" secondItem="cpp-c8-J9A" secondAttribute="trailing" constant="10" id="q6o-5d-cbo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="KGi-Mz-ypp" id="ei2-TL-RDU"/>
@@ -144,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wv-jB-a1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="133.00492610837438"/>
+            <point key="canvasLocation" x="-284" y="132.68365817091455"/>
         </scene>
         <!--Poem Table View Controller-->
         <scene sceneID="bLw-TK-lyO">

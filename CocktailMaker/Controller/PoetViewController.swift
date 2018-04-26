@@ -55,35 +55,18 @@ class PoetViewController: UIViewController,UINavigationControllerDelegate  {
                 authorImage.image  = #imageLiteral(resourceName: "defaultPhoto")
             }
             
-            
-            
             authorNameText.text = poem.author
             poemTitleText.text = poem.title
-            
-            
-            
-           
-                
-                
             for i in 0..<poem.lines.count{
-                
-                
                 fullPoem.append("\n \(poem.lines[i])")
-                
             }
             poemfullText.text = fullPoem
-            
         }
-       
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 

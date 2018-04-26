@@ -47,11 +47,15 @@ class PoetTableViewController: UITableViewController {
         
         let cellIdentifier = "PoetTableViewCell"
         
+        
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PoetTableViewCell else {
             
             fatalError("The dequeue cell is not an instance of PoetTableViewCell")
             
         }
+        
+       // cell.layer.cornerRadius = cell.frame.height/2
         
         //Fetches the appropriate meal for the data source layout
         let poet = poets[indexPath.row]
@@ -82,9 +86,9 @@ class PoetTableViewController: UITableViewController {
             
         else{
             
-            cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
+            //cell.photoImageView.image = #imageLiteral(resourceName: "defaultPhoto")
         }
-        
+       // cell.imageView?.layer.cornerRadius = cell.imageView?.
         return cell
     }
     
