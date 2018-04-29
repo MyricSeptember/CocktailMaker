@@ -11,6 +11,7 @@
 		67124AC7208EB10B00CC315F /* PoemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */; };
 		67124AC9208F1A7000CC315F /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124AC8208F1A7000CC315F /* Poem.swift */; };
 		67124ACB208F285800CC315F /* PoemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67124ACA208F285800CC315F /* PoemTableViewController.swift */; };
+		67124ACD2095BC2200CC315F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67124ACC2095BC2200CC315F /* GoogleService-Info.plist */; };
 		67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD2208C984F00A71A63 /* AppDelegate.swift */; };
 		67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AD4208C984F00A71A63 /* PoetViewController.swift */; };
 		67163AD8208C984F00A71A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163AD6208C984F00A71A63 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		67124AC6208EB10B00CC315F /* PoemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemTableViewCell.swift; sourceTree = "<group>"; };
 		67124AC8208F1A7000CC315F /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		67124ACA208F285800CC315F /* PoemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemTableViewController.swift; sourceTree = "<group>"; };
+		67124ACC2095BC2200CC315F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67163ACF208C984F00A71A63 /* CocktailMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67163AD2208C984F00A71A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67163AD4208C984F00A71A63 /* PoetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				67163AF3208E564600A71A63 /* View */,
 				67163AF4208E564E00A71A63 /* Controller */,
 				67163AD9208C984F00A71A63 /* Images.xcassets */,
+				67124ACC2095BC2200CC315F /* GoogleService-Info.plist */,
 				67163AF5208E572800A71A63 /* Supporting Files */,
 			);
 			path = CocktailMaker;
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67163ADD208C984F00A71A63 /* LaunchScreen.storyboard in Resources */,
+				67124ACD2095BC2200CC315F /* GoogleService-Info.plist in Resources */,
 				67163ADA208C984F00A71A63 /* Images.xcassets in Resources */,
 				67163AD8208C984F00A71A63 /* Main.storyboard in Resources */,
 			);
@@ -322,15 +326,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
