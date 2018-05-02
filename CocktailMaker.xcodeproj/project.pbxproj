@@ -19,6 +19,7 @@
 		67163ADD208C984F00A71A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67163ADB208C984F00A71A63 /* LaunchScreen.storyboard */; };
 		67163AE8208C984F00A71A63 /* CocktailMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67163AE7208C984F00A71A63 /* CocktailMakerTests.swift */; };
 		678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */; };
+		67C325F820964F120001BC70 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C325F720964F120001BC70 /* RegisterViewController.swift */; };
 		BA502A87219D75BA7D7A75B0 /* Pods_CocktailMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231F66ADF1BAA1F09CA38473 /* Pods_CocktailMakerTests.framework */; };
 		BD1217AF67ADD3FE84C2CAF5 /* Pods_CocktailMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E990ECAF01D55A2E32290EF /* Pods_CocktailMaker.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		67163AE7208C984F00A71A63 /* CocktailMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailMakerTests.swift; sourceTree = "<group>"; };
 		67163AE9208C984F00A71A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		678E7292208E5D7900F6FB09 /* PoetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoetTableViewCell.swift; sourceTree = "<group>"; };
+		67C325F720964F120001BC70 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F1669C8641CD3DCE38DF9D4B /* Pods-CocktailMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker.release.xcconfig"; sourceTree = "<group>"; };
 		F712CF1B006BE227174CF92F /* Pods-CocktailMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailMaker/Pods-CocktailMaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 				67163AD4208C984F00A71A63 /* PoetViewController.swift */,
 				67124ACA208F285800CC315F /* PoemTableViewController.swift */,
 				67124AC4208E70DB00CC315F /* PoetTableViewController.swift */,
+				67C325F720964F120001BC70 /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				67163AD5208C984F00A71A63 /* PoetViewController.swift in Sources */,
 				67163AD3208C984F00A71A63 /* AppDelegate.swift in Sources */,
 				67124ACB208F285800CC315F /* PoemTableViewController.swift in Sources */,
+				67C325F820964F120001BC70 /* RegisterViewController.swift in Sources */,
 				678E7293208E5D7900F6FB09 /* PoetTableViewCell.swift in Sources */,
 				67124AC5208E70DB00CC315F /* PoetTableViewController.swift in Sources */,
 				67124AC9208F1A7000CC315F /* Poem.swift in Sources */,
